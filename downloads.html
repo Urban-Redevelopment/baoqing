@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單下載 - 臺北市松山區寶清段七小段551地號等11筆土地 更新單元 都市更新會</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="history.html">沿革</a></li>
+                <li class="dropdown">
+                    <a href="downloads.html" class="dropdown-toggle active">表單下載 <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)"
+                                onclick="showDocument('2026年第一次會員大會委託書', '', 'pdf')">2026年第一次會員大會委託書</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                onclick="showDocument('成立大會委託書', '', 'pdf')">成立大會委託書下載</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                onclick="showDocument('成立大會委託書（範例）', '', 'pdf')">成立大會委託書（範例）</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="articles.html">更新會章程</a></li>
+                <li><a href="qa.html">都市更新問答集</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-small">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="main-title">都市更新會</h1>
+        </div>
+    </header>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee">
+            <p><i class="fa-solid fa-bullhorn"></i> 「本會最新公告與相關檔案已上傳至雲端硬碟，歡迎所有權人多加利用。」<a href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" target="_blank" style="color: var(--primary-color); text-decoration: underline; font-weight: bold; margin-left: 8px;"><i class="fa-solid fa-folder-open"></i> 前往雲端硬碟</a></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Downloads Section -->
+        <section class="fade-in-up visible">
+            <h2 class="section-title">表單內容</h2>
+
+            <div style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">
+                <p><i class="fa-solid fa-info-circle"></i> 點擊下方連結可於線上直接預覽及下載相關表單，或可直接前往雲端硬碟目錄尋找所需檔案。</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" target="_blank" class="btn-link" style="background-color: var(--primary-color); color: white; padding: 0.6rem 1.2rem; font-size: 1rem; border-radius: var(--radius-md); display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-folder-open"></i> 瀏覽官方雲端硬碟所有表單
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 1: 2026年第一次會員大會委託書 -->
+            <div id="proxy-2026-1" class="download-item">
+                <div class="download-header">
+                    <h3 class="download-title">2026年第一次會員大會委託書</h3>
+                    <div class="link-list">
+                        <a href="javascript:void(0)"
+                            onclick="showDocument('2026年第一次會員大會委託書', '', 'pdf')"
+                            class="btn-link"><i class="fa-solid fa-file-signature"></i> 線上預覽與下載</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Proxy -->
+            <div id="proxy" class="download-item">
+                <div class="download-header">
+                    <h3 class="download-title">成立大會委託書</h3>
+                    <div class="link-list">
+                        <a href="javascript:void(0)"
+                            onclick="showDocument('成立大會委託書', '', 'pdf')"
+                            class="btn-link"><i class="fa-solid fa-file-signature"></i> 線上預覽與下載</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Proxy Example -->
+            <div id="proxy-example" class="download-item">
+                <div class="download-header">
+                    <h3 class="download-title">成立大會委託書（範例）</h3>
+                    <div class="link-list">
+                        <a href="javascript:void(0)"
+                            onclick="showDocument('成立大會委託書（範例）', '', 'pdf')"
+                            class="btn-link"><i class="fa-solid fa-file-circle-check"></i> 線上預覽與下載</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-chart-line"></i> 瀏覽人數：
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=baoqing7.site&left_color=555555&right_color=227C9D&left_text=%20"
+                alt="visitor counter" />
+        </div>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>臺北市松山區寶清段七小段551地號等11筆土地更新單元</h3>
+                <h2>都市更新會</h2>
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-user-tie"></i> <strong>理事長：</strong> (尚未提供)</p>
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>聯絡地址：</strong> (尚未提供)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 臺北市松山區寶清段七小段551地號等11筆土地更新單元 都市更新會. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Document Viewer Overlay -->
+    <div id="documentOverlay" class="document-viewer-overlay">
+        <div class="overlay-header">
+            <h3 class="overlay-title">
+                <i id="overlayIcon" class="fa-solid fa-file-pdf"></i>
+                <span id="overlayTitle">載入中...</span>
+            </h3>
+            <div class="overlay-actions">
+                <a id="overlayFolderBtn" href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" target="_blank" class="btn-link" style="background-color: var(--primary-light); color: white; border-radius: var(--radius-md); padding: 0.4rem 0.8rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> 在新分頁開啟雲端
+                </a>
+                <button onclick="closeDocumentOverlay()" class="btn-close-overlay">
+                    <i class="fa-solid fa-xmark"></i> 返回
+                </button>
+            </div>
+        </div>
+        <div class="overlay-content">
+            <iframe id="overlayIframe" src=""></iframe>
+        </div>
+    </div>
+
+    <!-- Simple script for scroll animations and overlay -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Overlay Functions
+        function showDocument(title, driveId, type) {
+            const overlay = document.getElementById('documentOverlay');
+            const overlayTitle = document.getElementById('overlayTitle');
+            const overlayIcon = document.getElementById('overlayIcon');
+            const overlayIframe = document.getElementById('overlayIframe');
+
+            // Update content
+            overlayTitle.textContent = title;
+            if (driveId) {
+                overlayIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
+            } else {
+                overlayIframe.src = `https://drive.google.com/embeddedfolderview?id=1IwE88fg5eieADBdEqju8mupwwEbYPfkH#list`;
+            }
+
+            // Update icons based on type
+            if (type === 'word') {
+                overlayIcon.className = 'fa-solid fa-file-word';
+            } else if (type === 'folder') {
+                overlayIcon.className = 'fa-solid fa-folder-open';
+            } else {
+                overlayIcon.className = 'fa-solid fa-file-pdf';
+            }
+
+            // Show overlay and prevent body scrolling
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDocumentOverlay() {
+            const overlay = document.getElementById('documentOverlay');
+            const overlayIframe = document.getElementById('overlayIframe');
+
+            // Hide overlay and restore body scrolling
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Clear iframe source to stop loading/playback in background
+            setTimeout(() => {
+                overlayIframe.src = '';
+            }, 300);
+        }
+
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
