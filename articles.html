@@ -56,7 +56,7 @@
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <div class="marquee">
-            <p><i class="fa-solid fa-bullhorn"></i> 「2026年7月26日（日）上午10:00 假台北市松山區信義安康危老工作站（台北市松山區八德路四段678號3樓之1) 召開「都市更新會成立大會」，為維護您的權益，敬邀踴躍出席。」<a href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" target="_blank" style="color: var(--primary-color); text-decoration: underline; font-weight: bold; margin-left: 8px;"><i class="fa-solid fa-folder-open"></i> 前往雲端硬碟</a></p>
+            <p><i class="fa-solid fa-bullhorn"></i> 「2026年7月26日（日）上午10:00 假台北市松山區信義安康危老工作站（台北市松山區八德路四段678號3樓之1) 召開「都市更新會成立大會」，為維護您的權益，敬邀踴躍出席。」</p>
         </div>
     </div>
 
@@ -74,11 +74,7 @@
                         style="font-size: 1.1rem; padding: 0.8rem 1.6rem; background-color: var(--primary-color); color: white;">
                         <i class="fa-solid fa-file-pdf"></i> 線上預覽章程與相關文件
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" 
-                        target="_blank" class="btn-link"
-                        style="font-size: 1.1rem; padding: 0.8rem 1.6rem; border: 2px solid var(--primary-color); color: var(--primary-color); background-color: transparent;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> 在新分頁開啟雲端硬碟
-                    </a>
+                    
                 </div>
             </div>
         </section>
@@ -115,8 +111,8 @@
                 <span id="overlayTitle">載入中...</span>
             </h3>
             <div class="overlay-actions">
-                <a id="overlayFolderBtn" href="https://drive.google.com/drive/folders/1IwE88fg5eieADBdEqju8mupwwEbYPfkH?usp=drive_link" target="_blank" class="btn-link" style="background-color: var(--primary-light); color: white; border-radius: var(--radius-md); padding: 0.4rem 0.8rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> 在新分頁開啟雲端
+                <a id="overlayDownloadBtn" href="#" target="_blank" class="btn-link" style="background-color: var(--primary-light); color: white; border-radius: var(--radius-md); padding: 0.4rem 0.8rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> 在新分頁開啟
                 </a>
                 <button onclick="closeDocumentOverlay()" class="btn-close-overlay">
                     <i class="fa-solid fa-xmark"></i> 返回
@@ -157,13 +153,19 @@
             const overlayTitle = document.getElementById('overlayTitle');
             const overlayIcon = document.getElementById('overlayIcon');
             const overlayIframe = document.getElementById('overlayIframe');
+            const downloadBtn = document.getElementById('overlayDownloadBtn');
 
             // Update content
             overlayTitle.textContent = title;
             if (driveId) {
                 overlayIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
+                if (downloadBtn) {
+                    downloadBtn.href = `https://drive.google.com/file/d/${driveId}/view?usp=drive_link`;
+                    downloadBtn.style.display = 'inline-flex';
+                }
             } else {
-                overlayIframe.src = `https://drive.google.com/embeddedfolderview?id=1IwE88fg5eieADBdEqju8mupwwEbYPfkH#list`;
+                alert('檔案準備中，敬請期待！');
+                return;
             }
 
             // Update icons based on type
