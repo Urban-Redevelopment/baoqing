@@ -166,9 +166,6 @@
                     <span id="overlayTitle">載入中...</span>
                 </h3>
                 <div class="overlay-actions">
-                    <a id="overlayDownloadBtn" href="#" target="_blank" class="btn-link" style="background-color: var(--primary-light); color: white; border-radius: var(--radius-md); padding: 0.4rem 0.8rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> 在新分頁開啟
-                    </a>
                     <button onclick="closeDocumentOverlay()" class="btn-close-overlay">
                         <i class="fa-solid fa-xmark"></i> 返回
                     </button>
@@ -238,16 +235,11 @@
             const overlayTitle = document.getElementById('overlayTitle');
             const overlayIcon = document.getElementById('overlayIcon');
             const overlayIframe = document.getElementById('overlayIframe');
-            const downloadBtn = document.getElementById('overlayDownloadBtn');
 
             // Update content
             overlayTitle.textContent = title;
             if (driveId) {
                 overlayIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
-                if (downloadBtn) {
-                    downloadBtn.href = `https://drive.google.com/file/d/${driveId}/view?usp=sharing`;
-                    downloadBtn.style.display = 'inline-flex';
-                }
             } else {
                 alert('檔案準備中，敬請期待！');
                 return;
