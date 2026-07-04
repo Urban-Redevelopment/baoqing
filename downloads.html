@@ -64,18 +64,14 @@
 
         <!-- Downloads Section -->
         <section class="fade-in-up visible">
-            <h2 class="section-title">表單內容</h2>
-
+            <h2 class="section-title">表單下載</h2>
 
             <!-- Item 2: Proxy -->
             <div id="proxy" class="download-item">
                 <div class="download-header">
                     <h3 class="download-title">成立大會委託書</h3>
                     <div class="link-list">
-                        <a href="javascript:void(0)"
-                            onclick="showDocument('成立大會委託書', '1b0oFGrKnCO3OHOxg0dsAhCJyXL9g5SJQ', 'pdf')"
-                            class="btn-link"><i class="fa-solid fa-eye"></i> 線上預覽</a>
-                        <a href="https://drive.google.com/file/d/1b0oFGrKnCO3OHOxg0dsAhCJyXL9g5SJQ/view?usp=sharing"
+                        <a href="https://drive.google.com/uc?export=download&id=1b0oFGrKnCO3OHOxg0dsAhCJyXL9g5SJQ"
                             target="_blank"
                             class="btn-link" style="background-color: var(--primary-color); color: white;"><i class="fa-solid fa-download"></i> 下載表單</a>
                     </div>
@@ -87,10 +83,7 @@
                 <div class="download-header">
                     <h3 class="download-title">成立大會委託書（範例）</h3>
                     <div class="link-list">
-                        <a href="javascript:void(0)"
-                            onclick="showDocument('成立大會委託書（範例）', '1J8NZ0R_Fxqr0Vlfz6qROM3ahMFU8EHL-', 'pdf')"
-                            class="btn-link"><i class="fa-solid fa-eye"></i> 線上預覽</a>
-                        <a href="https://drive.google.com/file/d/1J8NZ0R_Fxqr0Vlfz6qROM3ahMFU8EHL-/view?usp=sharing"
+                        <a href="https://drive.google.com/uc?export=download&id=1J8NZ0R_Fxqr0Vlfz6qROM3ahMFU8EHL-"
                             target="_blank"
                             class="btn-link" style="background-color: var(--primary-color); color: white;"><i class="fa-solid fa-download"></i> 下載範例</a>
                     </div>
@@ -179,7 +172,7 @@
             if (driveId) {
                 overlayIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
                 if (downloadBtn) {
-                    downloadBtn.href = `https://drive.google.com/file/d/${driveId}/view?usp=sharing`;
+                    downloadBtn.href = `https://drive.google.com/uc?export=download&id=${driveId}`;
                     downloadBtn.style.display = 'inline-flex';
                 }
             } else {
